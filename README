@@ -1,0 +1,62 @@
+Creating a Virtual Environment
+
+Reference Article: 
+https://techcommunity.microsoft.com/blog/startupsatmicrosoftblog/migrating-from-openai-to-azure-openai/3989463
+
+Step 1 - Create a Local Folder in your computer for the new project
+
+Alternative Step 1 is to clone from the github template if one exists with all reusable resources applicable to the target project.
+
+Step 2 - Target Python environment
+
+Create a stable and predictable controled environment for your python project as it will save a lot of time down the road.
+
+In the VS Code, open a new terminal inside the project folder:
+
+Try to run a local command in python using the default environment:
+
+<python print('Hello World'!)>
+
+Now, as python is working on the terminal, let's create a python virtual environment specific to your environment
+<python -m venv .venv>  ## Windows, it creates a virtual environment called ".venv" in the project folder
+or,
+<python3 -m venv .venv>  ## Linux/macOS
+
+
+Now let's activate the python virtual environment.
+<.venv\Scripts\activate> ## Windows
+<source .venv/bin/activate> ## Linux / macOS
+
+Step 3 - Install Project Libraries 
+<pip install -r requirements.txt>
+
+######
+
+If you want to upload this project to your personal github as a new repository, starting from your local machine:
+
+1) Create a New Repository on GitHub:
+
+Go to GitHub and create a new repository. Do not initialize it with a README, .gitignore, or license.
+
+2) Open Your Terminal:
+
+3) Navigate to your local project directory.
+
+4) Initialize the Local Directory as a Git Repository:
+git init
+
+5) Add the Files to Your New Local Repository:
+git add .
+
+6) Commit the Files:
+git commit -m "Initial commit"
+
+7) Select the desired brand to upload the file, e.g. Main
+git branch -M main
+
+9) Add the Remote Repository:
+Copy the .git repo URL of your new GitHub repository.
+git remote add origin <URL>
+
+1) Push the Changes to GitHub:
+git push -u origin master
